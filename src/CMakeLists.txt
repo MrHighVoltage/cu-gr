@@ -85,8 +85,8 @@ include_directories(${PATH_ICCAD19})
 # Linker Flags  #
 #################
 
-# TODO: set static under release mode only
-set_target_properties(iccad19gr PROPERTIES LINK_FLAGS "-static -Wl,--whole-archive -rdynamic -lpthread -Wl,--no-whole-archive")
+# TODO: set static in release mode
+set_target_properties(iccad19gr PROPERTIES LINK_FLAGS "-Wl,--whole-archive -rdynamic -lpthread -Wl,--no-whole-archive")
 
 # LEF/DEF
 target_link_libraries(iccad19gr lef)
